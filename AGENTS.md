@@ -5,6 +5,7 @@ This is an OpenCode skills repository containing diagnostic skills for Linux sys
 ## Structure
 - `linux-precision-triage/` - Linux system troubleshooting skill (Ubuntu 24.04+)
 - `pve-cluster-doctor/` - Proxmox VE cluster diagnostics skill
+- `pve-ufw-manager/` - Proxmox VE UFW firewall management skill
 
 ## What not to do
 - Do not attempt to build, test, or lint this repo - it's a skill library, not a software project
@@ -19,3 +20,5 @@ This is an OpenCode skills repository containing diagnostic skills for Linux sys
 - `/pve-health` - Cluster health snapshot
 - `/pve-storage-audit` - Storage backend diagnostics
 - `/pve-quorum-fix` - Quorum emergency repair
+- `/pve-ufw-status` - 檢查防火牆狀態
+

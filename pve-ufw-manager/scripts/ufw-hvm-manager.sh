@@ -6,7 +6,7 @@
 set -euo pipefail
 
 # Configuration
-IPRANGE="1.2.3.4 5.6.7.8 9.10.11.12"
+IPRANGE="${IPRANGE:-}"  # Will be replaced by user input when using the skill
 PORTRANGE_TCP="22,80,443,9100,9221,3128"
 PORTRANGE_UDP="161"
 LOG_FILE="/var/log/pve/ufw-hvm-manager.log"
@@ -103,13 +103,13 @@ backup_rules() {
     fi
 }
 
-# Validate IP addresses in IPRANGE
+# Validate IP addresses or CIDR in IPRANGE
 validate_ip_range() {
     local ip
     for ip in $IPRANGE; do
-        # Simple validation - could be enhanced
-        if [[ ! $ip =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+$ ]]; then
-            log_message "ERROR" "Invalid IP address format: $ip"
+        # Support both IP (x.x.x.x) and CIDR (x.x.x.x/nn) formats
+        if [[ ! $ip =~ ^[0-9]+\.[0-9]+\.[0-9]+\.[0-9]+(/[0-9]+)?$ ]]; then
+            log_message "ERROR" "Invalid IP address or CIDR format: $ip"
             return 1
         fi
     done

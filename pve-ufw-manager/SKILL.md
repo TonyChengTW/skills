@@ -1,3 +1,14 @@
+---
+name: pve-ufw-manager
+description: Proxmox VE 虛擬化環境 UFW 防火牆管理
+commands:
+  - /pve-ufw-status: 檢查防火牆狀態
+  - /pve-ufw-apply: 套用新防火牆規則
+  - /pve-ufw-dry-run: 預覽即將套用的規則
+  - /pve-ufw-rollback: Rollback 到上一版本
+  - /pve-ufw-logs: 查看防火牆日誌
+---
+
 # PVE UFW Manager Skill
 
 ## 概述
@@ -76,3 +87,6 @@ ufw delete <rule_number>
 ## 相關檔案
 
 - `reference/ufw-ports.md` - 常用端口參考
+<skill_files>
+
+</skill_files>
