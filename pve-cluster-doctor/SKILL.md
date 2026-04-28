@@ -10,7 +10,7 @@ commands:
 
 # Proxmox Cluster Doctor Skill
 
-專精於 Proxmox CLI 工具群 (`qm`, `pct`, `pvesm`, `pvecm`, `pveceph`)。
+專精於 Proxmox CLI 工具羣 (`qm`, `pct`, `pvesm`, `pvecm`, `pveceph`)。
 
 ## 核心診斷工作流
 

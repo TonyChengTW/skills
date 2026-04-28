@@ -96,7 +96,7 @@ zpool status -x
 
 **目錄**: `pve-cluster-doctor/`
 
-專精於 Proxmox CLI 工具群（`qm`、`pct`、`pvesm`、`pvecm`、`pveceph`）的進階診斷與維護。
+專精於 Proxmox CLI 工具羣（`qm`、`pct`、`pvesm`、`pvecm`、`pveceph`）的進階診斷與維護。
 
 **核心診斷工作流**：
 
